@@ -2,7 +2,7 @@
 
 //vector functions
 //init
-VECTOR init_vector(int x, int y, int z)
+VECTOR init_vector(float x, float y, float z)
 {
     VECTOR vector;
     vector.x = x;
@@ -18,6 +18,11 @@ VECTOR vsum(VECTOR a, VECTOR b)
     result.y = a.y + b.y;
     result.z = a.z + b.z;
     return result;
+}
+
+float get_length(VECTOR v)
+{
+    return sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
 }
 
 //plane functions
