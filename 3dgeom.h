@@ -1,6 +1,21 @@
-#ifndef 3DGEOM_H_INCLUDED
-#define 3DGEOM_H_INCLUDED
+#ifndef THREE_DGEOM_H_INCLUDED
+#define THREE_DGEOM_H_INCLUDED
 
+typedef struct{
+    int x;
+    int y;
+    int z;
+}VECTOR;
 
+typedef struct{
+    VECTOR n;   //normal vector
+    VECTOR p;   //point on the plane
+}PLANE;
 
-#endif // 3DGEOM_H_INCLUDED
+//vector functions
+VECTOR init_vector(int x, int y, int z);
+
+//plane functions
+PLANE init_plane(VECTOR n, VECTOR p);
+
+#endif // THREE_3DGEOM_H_INCLUDED
