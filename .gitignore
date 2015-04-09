@@ -2,5 +2,7 @@
 main*
 /bin
 /obj
+*.depend
+
 
 
