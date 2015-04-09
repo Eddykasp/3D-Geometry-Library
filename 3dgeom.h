@@ -15,6 +15,9 @@ typedef struct{
 //vector functions
 VECTOR init_vector(int x, int y, int z);
 
+//operations
+VECTOR vsum(VECTOR a, VECTOR b);
+
 //plane functions
 PLANE init_plane(VECTOR n, VECTOR p);
 
