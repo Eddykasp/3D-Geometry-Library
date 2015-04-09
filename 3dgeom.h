@@ -19,6 +19,7 @@ VECTOR init_vector(float x, float y, float z);
 
 //operations
 VECTOR vsum(VECTOR a, VECTOR b);
+VECTOR vsmul(VECTOR v, float n);
 float get_length(VECTOR v);
 float dot_product(VECTOR a, VECTOR b);
 VECTOR cross_product(VECTOR a, VECTOR b);

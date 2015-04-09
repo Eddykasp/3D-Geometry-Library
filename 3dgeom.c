@@ -24,6 +24,15 @@ VECTOR vsum(VECTOR a, VECTOR b)
     return result;
 }
 
+VECTOR vsmul(VECTOR v, float n)
+{
+    VECTOR result;
+    result.x = v.x*n;
+    result.y = v.y*n;
+    result.z = v.z*n;
+    return result;
+}
+
 float get_length(VECTOR v)
 {
     return sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
@@ -32,6 +41,11 @@ float get_length(VECTOR v)
 float dot_product(VECTOR a, VECTOR b)
 {
     return a.x*b.x + a.y*b.y + a.z*b.z;
+}
+
+VECTOR cross_product(VECTOR a, VECTOR b)
+{
+
 }
 
 //plane functions
