@@ -1,5 +1,9 @@
 #include "3dgeom.h"
 
+//global constants
+
+VECTOR I = {1,0,0}, J = {0,1,0}, K = {0,0,1};
+
 //vector functions
 //init
 VECTOR init_vector(float x, float y, float z)
