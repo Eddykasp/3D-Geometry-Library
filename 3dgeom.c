@@ -25,6 +25,11 @@ float get_length(VECTOR v)
     return sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
 }
 
+float dot_product(VECTOR a, VECTOR b)
+{
+    return a.x*b.x + a.y*b.y + a.z*b.z;
+}
+
 //plane functions
 //init
 PLANE init_plane(VECTOR n, VECTOR p)
