@@ -45,7 +45,7 @@ float dot_product(VECTOR a, VECTOR b)
 
 VECTOR cross_product(VECTOR a, VECTOR b)
 {
-
+    return vsum(vsum(vsmul(I,(a.y*b.z - b.y*a.z)), vsmul(J, -(a.x*b.z - b.x*a.z))), vsmul(K, (a.x*b.y - b.x*a.y)));
 }
 
 //plane functions
