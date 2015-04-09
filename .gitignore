@@ -1,0 +1,6 @@
+*.cbp
+main*
+/bin
+/obj
+
+
