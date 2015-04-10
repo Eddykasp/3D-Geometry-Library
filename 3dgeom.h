@@ -25,6 +25,9 @@ float get_length(VECTOR v);
 float dot_product(VECTOR a, VECTOR b);
 VECTOR cross_product(VECTOR a, VECTOR b);
 
+//tools
+void print_vector(VECTOR v);
+
 //plane functions
 PLANE init_plane(VECTOR n, VECTOR p);
 

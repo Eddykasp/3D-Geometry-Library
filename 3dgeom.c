@@ -53,6 +53,12 @@ VECTOR cross_product(VECTOR a, VECTOR b)
     return vsum(vsum(vsmul(I,(a.y*b.z - b.y*a.z)), vsmul(J, -(a.x*b.z - b.x*a.z))), vsmul(K, (a.x*b.y - b.x*a.y)));
 }
 
+//tools
+void print_vector(VECTOR v)
+{
+    printf("(%.1f, %.1f, %.1f)",v.x, v.y, v.z);
+}
+
 //plane functions
 //init
 PLANE init_plane(VECTOR n, VECTOR p)
