@@ -6,13 +6,18 @@ VECTOR I = {1,0,0}, J = {0,1,0}, K = {0,0,1};
 
 //vector functions
 //init
-VECTOR init_vector(float x, float y, float z)
+VECTOR init_vector_coords(float x, float y, float z)
 {
     VECTOR vector;
     vector.x = x;
     vector.y = y;
     vector.z = z;
     return vector;
+}
+
+VECTOR init_vector_points(VECTOR p1, VECTOR p2)
+{
+    return vsum(vsmul(p1, -1),p2);
 }
 //operations
 VECTOR vsum(VECTOR a, VECTOR b)

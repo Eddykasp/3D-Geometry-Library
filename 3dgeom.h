@@ -15,7 +15,8 @@ typedef struct plane{
 }PLANE;
 
 //vector functions
-VECTOR init_vector(float x, float y, float z);
+VECTOR init_vector_coords(float x, float y, float z);
+VECTOR init_vector_points(VECTOR p1, VECTOR p2);
 
 //operations
 VECTOR vsum(VECTOR a, VECTOR b);
