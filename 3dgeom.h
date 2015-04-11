@@ -45,4 +45,7 @@ PLANE init_plane(VECTOR n, VECTOR p);
 //init
 CUBOID init_cuboid(VECTOR o, VECTOR d);
 
+//operations
+float get_area(CUBOID c);
+
 #endif // THREE_3DGEOM_H_INCLUDED

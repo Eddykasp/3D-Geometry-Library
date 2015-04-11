@@ -81,3 +81,9 @@ CUBOID init_cuboid(VECTOR o, VECTOR d)
     cuboid.d = d;
     return cuboid;
 }
+
+//operations
+float get_area(CUBOID c)
+{
+    return 2*(c.d.x*c.d.y + c.d.y*c.d.z + c.d.z*c.d.x);
+}
