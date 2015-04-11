@@ -26,6 +26,8 @@ typedef struct cuboid{
     VECTOR d;   //diagonal through cuboid
 }CUBOID;
 
+VECTOR I, J, K;
+
 //vector functions
 //init
 VECTOR init_vector_coords(float x, float y, float z);
@@ -57,5 +59,6 @@ CUBOID init_cuboid(VECTOR o, VECTOR d);
 //operations
 float get_cuboid_area(CUBOID c);
 float get_cuboid_volume(CUBOID c);
+void move_cuboid(CUBOID c, VECTOR v);
 
 #endif // THREE_3DGEOM_H_INCLUDED

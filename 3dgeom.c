@@ -101,3 +101,8 @@ float get_cuboid_volume(CUBOID c)
 {
     return c.d.x * c.d.y * c.d.z;
 }
+
+void move_cuboid(CUBOID c, VECTOR v)
+{
+    c.o = vsum(c.o, v);
+}
