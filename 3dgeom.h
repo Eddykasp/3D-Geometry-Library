@@ -16,6 +16,11 @@ typedef struct plane{
     VECTOR p;   //point on the plane
 }PLANE;
 
+typedef struct cuboid{
+    VECTOR o;   //cuboid origin
+    VECTOR d;   //diagonal through cuboid
+}CUBOID;
+
 //vector functions
 VECTOR init_vector_coords(float x, float y, float z);
 VECTOR init_vector_points(VECTOR p1, VECTOR p2);
