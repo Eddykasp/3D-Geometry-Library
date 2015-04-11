@@ -60,6 +60,15 @@ char * print_vector(char * str, VECTOR v)
     return str;
 }
 
+//line functions
+//init
+LINE init_line(VECTOR l, VECTOR p)
+{
+    LINE line;
+    line.l = l;
+    line.p = p;
+    return line;
+}
 
 //plane functions
 //init

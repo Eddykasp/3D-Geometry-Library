@@ -11,6 +11,11 @@ typedef struct vect{
     float z;
 }VECTOR;
 
+typedef struct line{
+    VECTOR l;   //vector parallel to line
+    VECTOR p;   //point on the line
+}LINE;
+
 typedef struct plane{
     VECTOR n;   //normal vector
     VECTOR p;   //point on the plane
@@ -22,6 +27,7 @@ typedef struct cuboid{
 }CUBOID;
 
 //vector functions
+//init
 VECTOR init_vector_coords(float x, float y, float z);
 VECTOR init_vector_points(VECTOR p1, VECTOR p2);
 
@@ -35,6 +41,9 @@ VECTOR cross_product(VECTOR a, VECTOR b);
 //tools
 char * print_vector(char * str, VECTOR v);
 
+//line functions
+//init
+LINE init_line(VECTOR l, VECTOR p);
 
 //plane functions
 //init
