@@ -3,6 +3,8 @@
 
 #include <math.h>
 
+#define VECTOR_PRT_LGTH 19
+
 typedef struct vect{
     float x;
     float y;
@@ -26,7 +28,7 @@ float dot_product(VECTOR a, VECTOR b);
 VECTOR cross_product(VECTOR a, VECTOR b);
 
 //tools
-void print_vector(VECTOR v);
+char * print_vector(char * str, VECTOR v);
 
 //plane functions
 PLANE init_plane(VECTOR n, VECTOR p);

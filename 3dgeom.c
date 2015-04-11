@@ -54,9 +54,10 @@ VECTOR cross_product(VECTOR a, VECTOR b)
 }
 
 //tools
-void print_vector(VECTOR v)
+char * print_vector(char * str, VECTOR v)
 {
-    printf("(%.1f, %.1f, %.1f)",v.x, v.y, v.z);
+    snprintf(str, VECTOR_PRT_LGTH,"(%.1f, %.1f, %.1f)",v.x, v.y, v.z);
+    return str;
 }
 
 //plane functions
