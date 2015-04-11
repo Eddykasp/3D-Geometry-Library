@@ -11,6 +11,11 @@ typedef struct vect{
     float z;
 }VECTOR;
 
+typedef struct line{
+    VECTOR l;   //vector parallel to line
+    VECTOR p;   //point on the line
+}LINE;
+
 typedef struct plane{
     VECTOR n;   //normal vector
     VECTOR p;   //point on the plane
