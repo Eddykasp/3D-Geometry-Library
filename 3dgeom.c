@@ -53,6 +53,11 @@ VECTOR cross_product(VECTOR a, VECTOR b)
     return vsum(vsum(vsmul(I,(a.y*b.z - b.y*a.z)), vsmul(J, -(a.x*b.z - b.x*a.z))), vsmul(K, (a.x*b.y - b.x*a.y)));
 }
 
+VECTOR rotate_vector(VECTOR x, LINE a, float angle)
+{
+    return vsum(vsmul(x, cos(angle)), vsmul(cross_product(x, a.l), sin(angle)));
+}
+
 //tools
 char * print_vector(char * str, VECTOR v)
 {
@@ -65,7 +70,7 @@ char * print_vector(char * str, VECTOR v)
 LINE init_line(VECTOR l, VECTOR p)
 {
     LINE line;
-    line.l = l;
+    line.l = vsmul(l, 1/get_length(l));
     line.p = p;
     return line;
 }
@@ -75,7 +80,7 @@ LINE init_line(VECTOR l, VECTOR p)
 PLANE init_plane(VECTOR n, VECTOR p)
 {
     PLANE plane;
-    plane.n = n;
+    plane.n = vsmul(n, 1/get_length(n));
     plane.p = p;
     return plane;
 }

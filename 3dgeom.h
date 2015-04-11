@@ -21,6 +21,9 @@ typedef struct plane{
     VECTOR p;   //point on the plane
 }PLANE;
 
+//globals
+VECTOR I,J,K;
+
 //vector functions
 //init
 VECTOR init_vector_coords(float x, float y, float z);
@@ -32,6 +35,7 @@ VECTOR vsmul(VECTOR v, float n);
 float get_length(VECTOR v);
 float dot_product(VECTOR a, VECTOR b);
 VECTOR cross_product(VECTOR a, VECTOR b);
+VECTOR rotate_vector(VECTOR x, LINE a, float angle);
 
 //tools
 char * print_vector(char * str, VECTOR v);
