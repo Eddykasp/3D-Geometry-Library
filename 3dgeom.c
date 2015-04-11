@@ -79,3 +79,30 @@ PLANE init_plane(VECTOR n, VECTOR p)
     plane.p = p;
     return plane;
 }
+
+
+//cuboid functions
+//init
+CUBOID init_cuboid(VECTOR o, VECTOR d)
+{
+    CUBOID cuboid;
+    cuboid.o = o;
+    cuboid.d = d;
+    return cuboid;
+}
+
+//operations
+float get_cuboid_area(CUBOID c)
+{
+    return 2*(c.d.x*c.d.y + c.d.y*c.d.z + c.d.z*c.d.x);
+}
+
+float get_cuboid_volume(CUBOID c)
+{
+    return c.d.x * c.d.y * c.d.z;
+}
+
+void move_cuboid(CUBOID c, VECTOR v)
+{
+    c.o = vsum(c.o, v);
+}
