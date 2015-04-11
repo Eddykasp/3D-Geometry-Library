@@ -22,6 +22,7 @@ typedef struct plane{
 }PLANE;
 
 //vector functions
+//init
 VECTOR init_vector_coords(float x, float y, float z);
 VECTOR init_vector_points(VECTOR p1, VECTOR p2);
 
@@ -35,7 +36,12 @@ VECTOR cross_product(VECTOR a, VECTOR b);
 //tools
 char * print_vector(char * str, VECTOR v);
 
+//line functions
+//init
+LINE init_line(VECTOR l, VECTOR p);
+
 //plane functions
+//init
 PLANE init_plane(VECTOR n, VECTOR p);
 
 #endif // THREE_3DGEOM_H_INCLUDED
