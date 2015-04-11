@@ -60,6 +60,7 @@ char * print_vector(char * str, VECTOR v)
     return str;
 }
 
+
 //plane functions
 //init
 PLANE init_plane(VECTOR n, VECTOR p)
@@ -68,4 +69,15 @@ PLANE init_plane(VECTOR n, VECTOR p)
     plane.n = n;
     plane.p = p;
     return plane;
+}
+
+
+//cuboid functions
+//init
+CUBOID init_cuboid(VECTOR o, VECTOR d)
+{
+    CUBOID cuboid;
+    cuboid.o = o;
+    cuboid.d = d;
+    return cuboid;
 }

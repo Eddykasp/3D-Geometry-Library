@@ -35,7 +35,14 @@ VECTOR cross_product(VECTOR a, VECTOR b);
 //tools
 char * print_vector(char * str, VECTOR v);
 
+
 //plane functions
+//init
 PLANE init_plane(VECTOR n, VECTOR p);
+
+
+//cuboid functions
+//init
+CUBOID init_cuboid(VECTOR o, VECTOR d);
 
 #endif // THREE_3DGEOM_H_INCLUDED
