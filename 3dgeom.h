@@ -21,8 +21,13 @@ typedef struct plane{
     VECTOR p;   //point on the plane
 }PLANE;
 
+typedef struct cuboid{
+    VECTOR o;   //cuboid origin
+    VECTOR d;   //diagonal through cuboid
+}CUBOID;
+
 //globals
-VECTOR I,J,K;
+VECTOR I, J, K;
 
 //vector functions
 //init
@@ -47,5 +52,15 @@ LINE init_line(VECTOR l, VECTOR p);
 //plane functions
 //init
 PLANE init_plane(VECTOR n, VECTOR p);
+
+
+//cuboid functions
+//init
+CUBOID init_cuboid(VECTOR o, VECTOR d);
+
+//operations
+float get_cuboid_area(CUBOID c);
+float get_cuboid_volume(CUBOID c);
+void move_cuboid(CUBOID c, VECTOR v);
 
 #endif // THREE_3DGEOM_H_INCLUDED
