@@ -61,6 +61,7 @@ CUBOID init_cuboid(VECTOR o, VECTOR d);
 //operations
 float get_cuboid_area(CUBOID c);
 float get_cuboid_volume(CUBOID c);
-void move_cuboid(CUBOID c, VECTOR v);
+CUBOID move_cuboid(CUBOID c, VECTOR v);
+CUBOID rotate_cuboid(CUBOID c, LINE a, float angle);
 
 #endif // THREE_3DGEOM_H_INCLUDED

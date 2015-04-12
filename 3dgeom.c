@@ -107,7 +107,15 @@ float get_cuboid_volume(CUBOID c)
     return c.d.x * c.d.y * c.d.z;
 }
 
-void move_cuboid(CUBOID c, VECTOR v)
+CUBOID move_cuboid(CUBOID c, VECTOR v)
 {
     c.o = vsum(c.o, v);
+    return c;
+}
+
+CUBOID rotate_cuboid(CUBOID c, LINE a float angle)
+{
+    c.o = rotate_vector(c.o, a, angle);
+    c.d = rotate_cuboid(c.d, a, angle);
+    return c;
 }
