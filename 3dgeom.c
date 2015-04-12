@@ -113,9 +113,11 @@ CUBOID move_cuboid(CUBOID c, VECTOR v)
     return c;
 }
 
+/**
 CUBOID rotate_cuboid(CUBOID c, LINE a, float angle)
 {
     c.o = rotate_vector(c.o, a, angle);
     c.d = rotate_vector(c.d, a, angle);
     return c;
 }
+*/
